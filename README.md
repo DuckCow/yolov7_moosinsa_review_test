@@ -1,1 +1,0 @@
-# yolov7_moosinsa_review_test

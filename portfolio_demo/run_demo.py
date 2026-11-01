@@ -40,10 +40,10 @@ def detect_fullbody_people(image: Image.Image):
     frame = cv2.cvtColor(np.asarray(small), cv2.COLOR_RGB2BGR)
     rects, margins = PERSON_DETECTOR.detectMultiScale(
         frame,
-        hitThreshold=0.0,
-        winStride=(8, 8),
-        padding=(8, 8),
-        scale=1.05,
+        hitThreshold=-1.0,
+        winStride=(4, 4),
+        padding=(16, 16),
+        scale=1.03,
         useMeanshiftGrouping=False,
     )
     possible = []

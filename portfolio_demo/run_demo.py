@@ -101,14 +101,10 @@ def render(name, img, boxes):
     f_body = get_font(18)
     f_small = get_font(14)
 
-    draw.text((50, 38), "리뷰 이미지 분류 프로토타입", font=f_title, fill="#111111")
-    draw.text((50, 88), "이미지 입력 → 전신 인물 탐지 → 후기 유형 후보", font=f_sub, fill="#666666")
-    draw.line((50, 125, 1150, 125), fill="#d8d8d8", width=2)
+    rounded(draw, (50, 70, 690, 700), radius=16, fill="#ffffff")
+    draw.text((78, 95), "INPUT", font=f_h, fill="#1c1c1c")
 
-    rounded(draw, (50, 160, 690, 700), radius=16, fill="#ffffff")
-    draw.text((78, 185), "입력 이미지", font=f_h, fill="#1c1c1c")
-
-    img_area = (80, 230, 660, 660)
+    img_area = (80, 140, 660, 660)
     display = fit_image(img, (0, 0, img_area[2]-img_area[0], img_area[3]-img_area[1]))
     canvas.paste(display, (img_area[0], img_area[1]))
 
@@ -126,8 +122,8 @@ def render(name, img, boxes):
         by2 = by1 + int(b["h"]*dh)
         draw.rectangle((bx1,by1,bx2,by2), outline="#1f6feb", width=4)
 
-    rounded(draw, (730, 160, 1150, 700), radius=16, fill="#ffffff")
-    draw.text((760, 185), "판정 결과", font=f_h, fill="#1c1c1c")
+    rounded(draw, (730, 70, 1150, 700), radius=16, fill="#ffffff")
+    draw.text((760, 95), "OUTPUT", font=f_h, fill="#1c1c1c")
 
     if boxes:
         label = "스타일 후기 후보"
@@ -140,17 +136,16 @@ def render(name, img, boxes):
         code = "PRODUCT_CANDIDATE"
         accent = "#2f6f4e"
 
-    draw.rounded_rectangle((760, 245, 1120, 335), radius=12, fill="#f5f8fb", outline=accent, width=3)
-    draw.text((790, 266), label, font=f_big, fill="#111111")
+    draw.rounded_rectangle((760, 165, 1120, 255), radius=12, fill="#f5f8fb", outline=accent, width=3)
+    draw.text((790, 186), label, font=f_big, fill="#111111")
 
-    draw.text((760, 380), reason, font=f_body, fill="#333333")
-    draw.text((760, 425), f"검출 인원: {len(boxes)}", font=f_body, fill="#333333")
-    draw.text((760, 470), "모델: OpenCV HOG + 선형 SVM", font=f_body, fill="#333333")
-    draw.text((760, 515), "용도: 2026 재구현 프로토타입", font=f_body, fill="#333333")
+    draw.text((760, 305), reason, font=f_body, fill="#333333")
+    draw.text((760, 350), f"검출 인원: {len(boxes)}", font=f_body, fill="#333333")
+    draw.text((760, 395), "OpenCV HOG + 선형 SVM", font=f_body, fill="#333333")
 
-    draw.line((760, 575, 1120, 575), fill="#dddddd", width=2)
-    draw.text((760, 600), "※ 과거 프로젝트의 최종 모델·91% 성능과 별개", font=f_small, fill="#777777")
-    draw.text((760, 628), f"결과 코드: {code}", font=f_small, fill="#777777")
+    draw.line((760, 465, 1120, 465), fill="#dddddd", width=2)
+    draw.text((760, 490), "2026 재구현 시연", font=f_small, fill="#777777")
+    draw.text((760, 518), f"결과 코드: {code}", font=f_small, fill="#777777")
 
     out = OUT / f"{name}_result.png"
     canvas.save(out)

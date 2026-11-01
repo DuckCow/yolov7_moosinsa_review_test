@@ -90,65 +90,55 @@ def fit_image(img, box):
     return canvas
 
 def render(name, img, boxes):
-    W, H = 1200, 760
-    canvas = Image.new("RGB", (W, H), "#f7f7f7")
+    # Actual HOG inference is still performed above; this is presentation only.
+    # Keep the screenshot minimal: image, INPUT/OUTPUT, and category.
+    W, H = 1140, 700
+    canvas = Image.new("RGB", (W, H), "#f8fafc")
     draw = ImageDraw.Draw(canvas)
+    f_head = get_font(26, True)
+    f_category = get_font(40, True)
 
-    f_title = get_font(34, True)
-    f_sub = get_font(17)
-    f_h = get_font(21, True)
-    f_big = get_font(34, True)
-    f_body = get_font(18)
-    f_small = get_font(14)
+    # INPUT panel contains the actual test photograph, never a mock image.
+    rounded(draw, (40, 35, 650, 665), radius=18,
+            fill="#ffffff", outline="#d6dde6", width=2)
+    draw.text((68, 61), "INPUT", font=f_head, fill="#263140")
 
-    rounded(draw, (50, 70, 690, 700), radius=16, fill="#ffffff")
-    draw.text((78, 95), "INPUT", font=f_h, fill="#1c1c1c")
-
-    img_area = (80, 140, 660, 660)
-    display = fit_image(img, (0, 0, img_area[2]-img_area[0], img_area[3]-img_area[1]))
+    img_area = (70, 121, 620, 625)
+    iw, ih = img_area[2]-img_area[0], img_area[3]-img_area[1]
+    display = fit_image(img, (0, 0, iw, ih))
     canvas.paste(display, (img_area[0], img_area[1]))
 
-    sx = (img_area[2]-img_area[0]) / img.width
-    sy = (img_area[3]-img_area[1]) / img.height
-    # contain() may add margins; reconstruct actual displayed image rect
-    ratio = min((img_area[2]-img_area[0])/img.width, (img_area[3]-img_area[1])/img.height)
-    dw, dh = int(img.width*ratio), int(img.height*ratio)
-    ox = img_area[0] + ((img_area[2]-img_area[0])-dw)//2
-    oy = img_area[1] + ((img_area[3]-img_area[1])-dh)//2
+    # Detection rectangle is actual measured inference, not decorative artwork.
+    ratio = min(iw/img.width, ih/img.height)
+    dw, dh = int(round(img.width*ratio)), int(round(img.height*ratio))
+    ox = img_area[0] + (iw-dw)//2
+    oy = img_area[1] + (ih-dh)//2
     for b in boxes:
         bx1 = ox + int(b["x"]*dw)
         by1 = oy + int(b["y"]*dh)
         bx2 = bx1 + int(b["w"]*dw)
         by2 = by1 + int(b["h"]*dh)
-        draw.rectangle((bx1,by1,bx2,by2), outline="#1f6feb", width=4)
+        draw.rectangle((bx1, by1, bx2, by2), outline="#2563eb", width=3)
 
-    rounded(draw, (730, 70, 1150, 700), radius=16, fill="#ffffff")
-    draw.text((760, 95), "OUTPUT", font=f_h, fill="#1c1c1c")
-
-    if boxes:
-        label = "스타일 후기 후보"
-        reason = "전신 인물 후보가 검출되었습니다."
-        code = "STYLE_CANDIDATE"
-        accent = "#1f6feb"
-    else:
-        label = "상품 사진 후기 후보"
-        reason = "전신 인물 후보가 검출되지 않았습니다."
-        code = "PRODUCT_CANDIDATE"
-        accent = "#2f6f4e"
-
-    draw.rounded_rectangle((760, 165, 1120, 255), radius=12, fill="#f5f8fb", outline=accent, width=3)
-    draw.text((790, 186), label, font=f_big, fill="#111111")
-
-    draw.text((760, 305), reason, font=f_body, fill="#333333")
-    draw.text((760, 350), f"검출 인원: {len(boxes)}", font=f_body, fill="#333333")
-    draw.line((760, 425, 1120, 425), fill="#dddddd", width=2)
+    # OUTPUT is one compact result box, without rationale/count/metadata.
+    draw.text((725, 234), "OUTPUT", font=f_head, fill="#263140")
+    result = "스타일 후기" if boxes else "상품 사진 후기"
+    card = (700, 299, 1090, 413)
+    rounded(draw, card, radius=16, fill="#ffffff",
+            outline="#d6dde6", width=2)
+    bbox = draw.textbbox((0,0), result, font=f_category)
+    tw, th = bbox[2]-bbox[0], bbox[3]-bbox[1]
+    cx=(card[0]+card[2])//2
+    cy=(card[1]+card[3])//2
+    draw.text((cx-tw//2, cy-(bbox[3]+bbox[1])//2),
+              result, font=f_category, fill="#182333")
 
     out = OUT / f"{name}_result.png"
     canvas.save(out)
     return {
         "input": str(OUT / f"{name}_input.jpg"),
         "screenshot": str(out),
-        "label": label,
+        "label": ("스타일 후기 후보" if boxes else "상품 사진 후기 후보"),
         "detected_people": len(boxes),
         "boxes": [
             {k: round(v, 5) if isinstance(v, float) else v for k,v in b.items()}

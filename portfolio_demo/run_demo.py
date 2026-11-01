@@ -141,11 +141,7 @@ def render(name, img, boxes):
 
     draw.text((760, 305), reason, font=f_body, fill="#333333")
     draw.text((760, 350), f"검출 인원: {len(boxes)}", font=f_body, fill="#333333")
-    draw.text((760, 395), "OpenCV HOG + 선형 SVM", font=f_body, fill="#333333")
-
-    draw.line((760, 465, 1120, 465), fill="#dddddd", width=2)
-    draw.text((760, 490), "2026 재구현 시연", font=f_small, fill="#777777")
-    draw.text((760, 518), f"결과 코드: {code}", font=f_small, fill="#777777")
+    draw.line((760, 425, 1120, 425), fill="#dddddd", width=2)
 
     out = OUT / f"{name}_result.png"
     canvas.save(out)

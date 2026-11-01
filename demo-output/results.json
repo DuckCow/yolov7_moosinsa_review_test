@@ -10,9 +10,17 @@
   "worn": {
     "input": "demo-output/worn_input.jpg",
     "screenshot": "demo-output/worn_result.png",
-    "label": "상품 사진 후기 후보",
-    "detected_people": 0,
-    "boxes": [],
+    "label": "스타일 후기 후보",
+    "detected_people": 1,
+    "boxes": [
+      {
+        "x": 0.265,
+        "y": 0.235,
+        "w": 0.48167,
+        "h": 0.72125,
+        "margin": 1.49448
+      }
+    ],
     "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub1_3x4.jpg?width=600"
   }
 }

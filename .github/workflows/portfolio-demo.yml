@@ -30,6 +30,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install opencv-python-headless==4.10.0.84 pillow requests numpy
 
+      - name: Diagnose same-product gallery
+        run: |
+          python portfolio_demo/diag.py
+
       - name: Run actual prototype on same-product image pair
         run: |
           python portfolio_demo/run_demo.py

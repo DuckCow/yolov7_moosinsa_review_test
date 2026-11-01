@@ -1,0 +1,18 @@
+{
+  "product": {
+    "input": "demo-output/product_input.jpg",
+    "screenshot": "demo-output/product_result.png",
+    "label": "상품 사진 후기 후보",
+    "detected_people": 0,
+    "boxes": [],
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/item/goods_00_436133_3x4.jpg?width=600"
+  },
+  "worn": {
+    "input": "demo-output/worn_input.jpg",
+    "screenshot": "demo-output/worn_result.png",
+    "label": "상품 사진 후기 후보",
+    "detected_people": 0,
+    "boxes": [],
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub1_3x4.jpg?width=600"
+  }
+}

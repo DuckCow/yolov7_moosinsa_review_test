@@ -57,9 +57,9 @@ ICONS={
  "docker":("https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",None),
  "pg":("https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",None),
  "github":("https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",None),
- "ec2":("https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/amazonec2.svg","#e87922"),
- "s3":("https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/amazons3.svg","#bd4343"),
- "toss":("https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/toss.svg","#2774db"),
+ "ec2":("https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Compute/EC2.png",None),
+ "s3":("https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageService.png",None),
+ "toss":("https://static.toss.im/icons/svg/logo-payments-short-blue.svg",None),
 }
 available={}
 icons={}
@@ -67,8 +67,15 @@ for key,(url,tint) in ICONS.items():
     try:
         r=requests.get(url,timeout=18,headers={"User-Agent":"portfolio-graphic/1.0"})
         r.raise_for_status()
-        png=cairosvg.svg2png(bytestring=r.content,output_width=160,output_height=160)
-        im=Image.open(BytesIO(png)).convert("RGBA")
+        if r.content[:8] == b"\x89PNG\r\n\x1a\n":
+            im=Image.open(BytesIO(r.content)).convert("RGBA")
+            im.thumbnail((160,160),Image.Resampling.LANCZOS)
+            square=Image.new("RGBA",(160,160),(0,0,0,0))
+            square.paste(im,((160-im.width)//2,(160-im.height)//2),im)
+            im=square
+        else:
+            png=cairosvg.svg2png(bytestring=r.content,output_width=160,output_height=160)
+            im=Image.open(BytesIO(png)).convert("RGBA")
         if tint:
             mask=im.getchannel("A")
             color=Image.new("RGBA",im.size,tint)
@@ -151,8 +158,7 @@ arrow(1002,492,1080,492,twoway=True)
 textcenter(1041,465,"Payment",FX,SUB)
 arrow(665,682,665,740,twoway=True)
 textcenter(777,710,"Read / Write",FX,SUB)
-arrow(1080,775,1002,775)
-textcenter(1038,750,"Code",FX,SUB)
+
 
 out=OUT/"commerce_architecture_logos.png"
 canvas.save(out,optimize=True)

@@ -1,0 +1,492 @@
+{
+  "product": {
+    "status": 200,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/item/goods_00_436133_3x4.jpg?width=600",
+    "size": [
+      600,
+      800
+    ],
+    "raw_count": 3,
+    "top": [
+      {
+        "x": 206,
+        "y": 197,
+        "w": 245,
+        "h": 490,
+        "margin": 0.1410193167394027,
+        "h_ratio": 0.6125,
+        "area_ratio": 0.2501041666666667
+      },
+      {
+        "x": 25,
+        "y": 286,
+        "w": 243,
+        "h": 487,
+        "margin": -0.45669313066173345,
+        "h_ratio": 0.60875,
+        "area_ratio": 0.24654375
+      },
+      {
+        "x": 332,
+        "y": 285,
+        "w": 247,
+        "h": 494,
+        "margin": -0.8540187112121203,
+        "h_ratio": 0.6175,
+        "area_ratio": 0.2542041666666667
+      }
+    ]
+  },
+  "sub1": {
+    "status": 200,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub1_3x4.jpg?width=600",
+    "size": [
+      600,
+      800
+    ],
+    "raw_count": 5,
+    "top": [
+      {
+        "x": 159,
+        "y": 188,
+        "w": 289,
+        "h": 577,
+        "margin": 1.4944822906982154,
+        "h_ratio": 0.72125,
+        "area_ratio": 0.34740208333333333
+      },
+      {
+        "x": 250,
+        "y": 109,
+        "w": 119,
+        "h": 237,
+        "margin": 0.23697595275007188,
+        "h_ratio": 0.29625,
+        "area_ratio": 0.05875625
+      },
+      {
+        "x": 505,
+        "y": 624,
+        "w": 69,
+        "h": 138,
+        "margin": -0.18867094139568508,
+        "h_ratio": 0.1725,
+        "area_ratio": 0.0198375
+      },
+      {
+        "x": 463,
+        "y": 185,
+        "w": 137,
+        "h": 303,
+        "margin": -0.34437527845147997,
+        "h_ratio": 0.37875,
+        "area_ratio": 0.08648125
+      },
+      {
+        "x": 423,
+        "y": 642,
+        "w": 87,
+        "h": 158,
+        "margin": -0.6568304081447423,
+        "h_ratio": 0.1975,
+        "area_ratio": 0.0286375
+      }
+    ]
+  },
+  "sub2": {
+    "status": 200,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub2_3x4.jpg?width=600",
+    "size": [
+      600,
+      800
+    ],
+    "raw_count": 8,
+    "top": [
+      {
+        "x": 222,
+        "y": 328,
+        "w": 201,
+        "h": 403,
+        "margin": 3.7686121393344365,
+        "h_ratio": 0.50375,
+        "area_ratio": 0.16875625
+      },
+      {
+        "x": 298,
+        "y": 168,
+        "w": 103,
+        "h": 205,
+        "margin": 0.3748288715723902,
+        "h_ratio": 0.25625,
+        "area_ratio": 0.04398958333333333
+      },
+      {
+        "x": 249,
+        "y": 94,
+        "w": 70,
+        "h": 139,
+        "margin": 0.3352367610204965,
+        "h_ratio": 0.17375,
+        "area_ratio": 0.02027083333333333
+      },
+      {
+        "x": 206,
+        "y": 199,
+        "w": 85,
+        "h": 170,
+        "margin": -0.2929711500182748,
+        "h_ratio": 0.2125,
+        "area_ratio": 0.030104166666666668
+      },
+      {
+        "x": 194,
+        "y": 72,
+        "w": 173,
+        "h": 345,
+        "margin": -0.43791132589103654,
+        "h_ratio": 0.43125,
+        "area_ratio": 0.12434375
+      },
+      {
+        "x": 193,
+        "y": 121,
+        "w": 118,
+        "h": 236,
+        "margin": -0.46351400623098016,
+        "h_ratio": 0.295,
+        "area_ratio": 0.05801666666666667
+      },
+      {
+        "x": 494,
+        "y": 620,
+        "w": 80,
+        "h": 160,
+        "margin": -0.5223941067815758,
+        "h_ratio": 0.2,
+        "area_ratio": 0.02666666666666667
+      },
+      {
+        "x": 445,
+        "y": 645,
+        "w": 78,
+        "h": 155,
+        "margin": -0.6448717452585697,
+        "h_ratio": 0.19375,
+        "area_ratio": 0.0251875
+      }
+    ]
+  },
+  "sub3": {
+    "status": 200,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub3_3x4.jpg?width=600",
+    "size": [
+      600,
+      800
+    ],
+    "raw_count": 5,
+    "top": [
+      {
+        "x": 192,
+        "y": 217,
+        "w": 240,
+        "h": 481,
+        "margin": 3.410601935349405,
+        "h_ratio": 0.60125,
+        "area_ratio": 0.2405
+      },
+      {
+        "x": 271,
+        "y": 95,
+        "w": 74,
+        "h": 147,
+        "margin": 0.40297887567430735,
+        "h_ratio": 0.18375,
+        "area_ratio": 0.0226625
+      },
+      {
+        "x": 501,
+        "y": 625,
+        "w": 69,
+        "h": 138,
+        "margin": -0.1749414477380924,
+        "h_ratio": 0.1725,
+        "area_ratio": 0.0198375
+      },
+      {
+        "x": 444,
+        "y": 302,
+        "w": 115,
+        "h": 229,
+        "margin": -0.29592048039194196,
+        "h_ratio": 0.28625,
+        "area_ratio": 0.054864583333333335
+      },
+      {
+        "x": 430,
+        "y": 645,
+        "w": 76,
+        "h": 152,
+        "margin": -0.5511612863047048,
+        "h_ratio": 0.19,
+        "area_ratio": 0.024066666666666667
+      }
+    ]
+  },
+  "sub4": {
+    "status": 200,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub4_3x4.jpg?width=600",
+    "size": [
+      600,
+      800
+    ],
+    "raw_count": 6,
+    "top": [
+      {
+        "x": 134,
+        "y": 208,
+        "w": 268,
+        "h": 535,
+        "margin": 3.0396470124833286,
+        "h_ratio": 0.66875,
+        "area_ratio": 0.29870833333333335
+      },
+      {
+        "x": 241,
+        "y": 93,
+        "w": 70,
+        "h": 141,
+        "margin": 0.7196351322345436,
+        "h_ratio": 0.17625,
+        "area_ratio": 0.0205625
+      },
+      {
+        "x": 495,
+        "y": 620,
+        "w": 79,
+        "h": 158,
+        "margin": -0.056870486470870674,
+        "h_ratio": 0.1975,
+        "area_ratio": 0.026004166666666665
+      },
+      {
+        "x": 459,
+        "y": 323,
+        "w": 66,
+        "h": 132,
+        "margin": -0.46697873662924394,
+        "h_ratio": 0.165,
+        "area_ratio": 0.01815
+      },
+      {
+        "x": 414,
+        "y": 285,
+        "w": 116,
+        "h": 232,
+        "margin": -0.5964158724527806,
+        "h_ratio": 0.29,
+        "area_ratio": 0.05606666666666667
+      },
+      {
+        "x": 393,
+        "y": 612,
+        "w": 93,
+        "h": 186,
+        "margin": -0.778198516491102,
+        "h_ratio": 0.2325,
+        "area_ratio": 0.0360375
+      }
+    ]
+  },
+  "sub5": {
+    "status": 200,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub5_3x4.jpg?width=600",
+    "size": [
+      600,
+      800
+    ],
+    "raw_count": 6,
+    "top": [
+      {
+        "x": 186,
+        "y": 270,
+        "w": 230,
+        "h": 461,
+        "margin": 2.8168730798643082,
+        "h_ratio": 0.57625,
+        "area_ratio": 0.22089583333333335
+      },
+      {
+        "x": 223,
+        "y": 170,
+        "w": 103,
+        "h": 206,
+        "margin": -0.3265233081765473,
+        "h_ratio": 0.2575,
+        "area_ratio": 0.04420416666666667
+      },
+      {
+        "x": 497,
+        "y": 625,
+        "w": 69,
+        "h": 138,
+        "margin": -0.3989533253479749,
+        "h_ratio": 0.1725,
+        "area_ratio": 0.0198375
+      },
+      {
+        "x": 244,
+        "y": 118,
+        "w": 154,
+        "h": 309,
+        "margin": -0.5050557306967676,
+        "h_ratio": 0.38625,
+        "area_ratio": 0.0991375
+      },
+      {
+        "x": 467,
+        "y": 626,
+        "w": 68,
+        "h": 135,
+        "margin": -0.7311700778082013,
+        "h_ratio": 0.16875,
+        "area_ratio": 0.019125
+      },
+      {
+        "x": 439,
+        "y": 645,
+        "w": 78,
+        "h": 155,
+        "margin": -0.7764710665214807,
+        "h_ratio": 0.19375,
+        "area_ratio": 0.0251875
+      }
+    ]
+  },
+  "sub6": {
+    "status": 200,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub6_3x4.jpg?width=600",
+    "size": [
+      600,
+      800
+    ],
+    "raw_count": 6,
+    "top": [
+      {
+        "x": 192,
+        "y": 243,
+        "w": 206,
+        "h": 412,
+        "margin": 2.782267116708681,
+        "h_ratio": 0.515,
+        "area_ratio": 0.17681666666666668
+      },
+      {
+        "x": 261,
+        "y": 92,
+        "w": 72,
+        "h": 145,
+        "margin": -0.1936199365882203,
+        "h_ratio": 0.18125,
+        "area_ratio": 0.02175
+      },
+      {
+        "x": 424,
+        "y": 254,
+        "w": 83,
+        "h": 165,
+        "margin": -0.2706663584103808,
+        "h_ratio": 0.20625,
+        "area_ratio": 0.02853125
+      },
+      {
+        "x": 401,
+        "y": 194,
+        "w": 93,
+        "h": 186,
+        "margin": -0.33777617546729743,
+        "h_ratio": 0.2325,
+        "area_ratio": 0.0360375
+      },
+      {
+        "x": 486,
+        "y": 624,
+        "w": 71,
+        "h": 141,
+        "margin": -0.3847855683416128,
+        "h_ratio": 0.17625,
+        "area_ratio": 0.02085625
+      },
+      {
+        "x": 429,
+        "y": 646,
+        "w": 76,
+        "h": 153,
+        "margin": -0.8363925367593765,
+        "h_ratio": 0.19125,
+        "area_ratio": 0.024225
+      }
+    ]
+  },
+  "sub7": {
+    "status": 404,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub7_3x4.jpg?width=600"
+  },
+  "sub8": {
+    "status": 404,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub8_3x4.jpg?width=600"
+  },
+  "sub9": {
+    "status": 404,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub9_3x4.jpg?width=600"
+  },
+  "sub10": {
+    "status": 404,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub10_3x4.jpg?width=600"
+  },
+  "sub11": {
+    "status": 404,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub11_3x4.jpg?width=600"
+  },
+  "sub12": {
+    "status": 404,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub12_3x4.jpg?width=600"
+  },
+  "sub13": {
+    "status": 200,
+    "url": "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/436133/sub/goods_436133_sub13_3x4.jpg?width=600",
+    "size": [
+      600,
+      800
+    ],
+    "raw_count": 3,
+    "top": [
+      {
+        "x": 182,
+        "y": 239,
+        "w": 218,
+        "h": 435,
+        "margin": 0.17065992825155263,
+        "h_ratio": 0.54375,
+        "area_ratio": 0.1975625
+      },
+      {
+        "x": 122,
+        "y": 205,
+        "w": 121,
+        "h": 241,
+        "margin": 0.05039636278524995,
+        "h_ratio": 0.30125,
+        "area_ratio": 0.06075208333333333
+      },
+      {
+        "x": 340,
+        "y": 304,
+        "w": 236,
+        "h": 473,
+        "margin": -0.6812266822380479,
+        "h_ratio": 0.59125,
+        "area_ratio": 0.23255833333333334
+      }
+    ]
+  }
+}
